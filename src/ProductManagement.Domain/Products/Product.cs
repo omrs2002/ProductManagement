@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Entities.Auditing;
-using ProductManagement.Category;
+using ProductManagement.Categories;
 
 namespace ProductManagement.Products
 {
     public class Product : FullAuditedAggregateRoot<Guid>
     {
-        public Category.Category Category { get; set; }
+        public Category Category { get; set; }
         public Guid CategoryId { get; set; }
         public string Name { get; set; }
         public float Price { get; set; }

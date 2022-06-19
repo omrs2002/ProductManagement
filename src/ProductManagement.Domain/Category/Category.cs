@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Entities.Auditing;
 
-namespace ProductManagement.Category
+namespace ProductManagement.Categories
 {
     public class Category : AuditedAggregateRoot<Guid>
     {
