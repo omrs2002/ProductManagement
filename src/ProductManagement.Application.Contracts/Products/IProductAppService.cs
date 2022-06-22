@@ -6,6 +6,7 @@ namespace ProductManagement.Products
     public interface IProductAppService : IApplicationService
     {
         Task<PagedResultDto<ProductDto>>  GetListAsync(PagedAndSortedResultRequestDto input);
+
     }
 }
 
