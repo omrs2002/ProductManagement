@@ -176,6 +176,7 @@ public class ProductManagementWebModule : AbpModule
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "ProductManagement API", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
                 options.CustomSchemaIds(type => type.FullName);
+                
             }
         );
     }
@@ -215,6 +216,7 @@ public class ProductManagementWebModule : AbpModule
         app.UseAbpSwaggerUI(options =>
         {
             options.SwaggerEndpoint("/swagger/v1/swagger.json", "ProductManagement API");
+            options.DefaultModelsExpandDepth(-1); // Disable swagger schemas at bottom
         });
         app.UseAuditing();
         app.UseAbpSerilogEnrichers();
