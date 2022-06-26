@@ -10,6 +10,7 @@ public class ProductManagementWebAutoMapperProfile : Profile
     {
         //Define your AutoMapper configuration here for the Web project.
         CreateMap<CreateEditProductViewModel, CreateUpdateProductDto>();
+        CreateMap<ProductDto, CreateEditProductViewModel>();
 
     }
 }
