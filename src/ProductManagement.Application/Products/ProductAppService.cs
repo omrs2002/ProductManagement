@@ -65,6 +65,12 @@ namespace ProductManagement.Products
             ObjectMapper.Map(input, product);
         }
 
+        public async Task DeleteAsync(Guid id)
+        {
+            await _productRepository.DeleteAsync(id);
+        }
+
+
 
 
 
